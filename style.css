@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #07252d;
+  text-align: center;
+  transform: translateY(250px);
+}
+
+h2 {
+  font-size: 96px;
+  color: #0e3742;
+  text-transform: uppercase;
+}
+
+h2 span {
+  animation-name: animate;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+h2 span:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    color: white;
+    text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+      0 0 80px #03bcf4, 0 0 160px #03bcf4, 0 0 400px #03bcf4;
+  }
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 200px;
+  font-size: 30px;
+  margin: 250px auto 0 auto;
+  /* animation-name: anime1; */
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; /*отвечает за скорость смены кадров анимации*/
+  box-shadow: 10px 20px 15px red inset, 100px 20px 15px blue,
+    50px 15px 20px green;
+
+  text-shadow: 15px 2px 15px salmon;
+}
+
+/*box-shadow - тень для блока*/
+/*
+X-отступ Y-отступ размытие (растяжение) цвет (внутренняя тень - inset)
+*/
+
+@keyframes anime1 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(800px);
+  }
+}
